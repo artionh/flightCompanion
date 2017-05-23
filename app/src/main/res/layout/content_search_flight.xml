@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="io.rocketapps.apps.android.flightcompanion.activities.SearchFlightActivity"
+    tools:showIn="@layout/activity_search_flight">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical"
+                android:minWidth="52dp"
+                android:paddingTop="8dp"
+                android:text="@string/str_from"
+                android:textSize="23sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/flight_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_toRightOf="@+id/txt_from"
+                android:hint="@string/flight_from" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical"
+                android:minWidth="52dp"
+                android:paddingTop="8dp"
+                android:text="@string/str_to"
+                android:textSize="23sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/flight_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_toRightOf="@+id/txt_to"
+                android:hint="@string/flight_to" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_view_on_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/view_on_map"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:minWidth="260dp" />
+
+    <!--<com.google.android.gms.maps.MapView-->
+    <!--android:id="@+id/mapView"-->
+    <!--android:minWidth="240dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="240dp"-->
+    <!--android:layout_below="@+id/linearLayout"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="24dp" />-->
+
+</RelativeLayout>

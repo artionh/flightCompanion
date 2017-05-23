@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="io.rocketapps.apps.android.flightcompanion.MainActivity">
+
+
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"  />-->
+
+
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:background="@color/gray_color_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_margin="64dp"
+            android:src="@drawable/logo"
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_below="@+id/logo"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:elevation="4dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_background"
+                android:id="@+id/search_flight"
+                android:textSize="26sp"
+                android:text="@string/save_flight"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_marginBottom="8dp"
+                android:elevation="4dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_background"
+                android:id="@+id/view_flight"
+                android:layout_marginTop="16dp"
+                android:textSize="26sp"
+                android:text="@string/view_flight"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
