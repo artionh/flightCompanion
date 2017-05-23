@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.rocketapps.apps.android.flightcompanion">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".FlightApplicaiton"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoAction">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SearchFlightActivity"
+            android:label="@string/title_activity_search_flight"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoAction">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.rocketapps.apps.android.flightcompanion.MainActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key_v12321" />
+
+        <activity
+            android:name=".activities.SavedFlightsActivity"
+            android:label="@string/title_activity_saved_flights"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoAction">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.rocketapps.apps.android.flightcompanion.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.FlightDetailsActivity"
+            android:label="@string/title_activity_flight_details"
+            android:parentActivityName=".activities.SavedFlightsActivity"
+            android:theme="@style/AppTheme.NoAction">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.rocketapps.apps.android.flightcompanion.activities.SavedFlightsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.FlightMapRouteActivity"
+            android:label="@string/title_activity_flight_map_route"
+            android:parentActivityName=".activities.FlightDetailsActivity"
+            android:theme="@style/AppTheme.NoAction">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.rocketapps.apps.android.flightcompanion.activities.FlightDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.PlaceDetailsActivity"
+            android:label="@string/title_activity_place_details"
+            android:theme="@style/AppTheme.NoAction"></activity>
+    </application>
+
+</manifest>
